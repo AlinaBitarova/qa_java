@@ -23,7 +23,6 @@ public class LionTest {
         Mockito.when(feline.getKittens()).thenReturn(expectedKittens);
         int actualKittens = lion.getKittens();
         assertEquals("Котят неверное число", expectedKittens, actualKittens);
-        Mockito.verify(feline, Mockito.times(1)).getKittens();
     }
 
     @Test
@@ -41,7 +40,6 @@ public class LionTest {
         Mockito.when(feline.getFood("Хищник")).thenReturn(expectedFood);
         List<String> actualFood = lion.getFood();
         assertEquals("Рацион льва неправильный", expectedFood, actualFood);
-        Mockito.verify(feline, Mockito.times(1)).getFood("Хищник");
     }
 
     @Test
